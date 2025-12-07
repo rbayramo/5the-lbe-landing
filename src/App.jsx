@@ -636,7 +636,7 @@ export default function App() {
 
                   <div style={{ display: "flex", justifyContent: "space-between", gap: 10, marginTop: 8, flexWrap: "wrap" }}>
                     <span className="section-sub" style={{ fontSize: 12.5, marginTop: 0 }}>
-                      Prefer to call? (403) 555-0123
+                      Prefer to call? +1 (587) 718-5627
                     </span>
                     <span className="section-sub" style={{ fontSize: 12.5, marginTop: 0 }}>
                       Typical response within 1 business day

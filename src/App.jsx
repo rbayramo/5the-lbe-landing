@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 
 const NAV_ITEMS = [
   { id: "wins", label: "Wins" },
-  { id: "system", label: "System" },
+  { id: "system", label: "How it works" },
   { id: "results", label: "Results" },
   { id: "contact", label: "Assessment" },
   { id: "faq", label: "FAQ" }
@@ -10,20 +10,20 @@ const NAV_ITEMS = [
 
 const FAQ_ITEMS = [
   {
-    q: "Do we need to change our POS or software?",
-    a: "Usually no. The goal is to boost revenue using what you already have. If a small tool change clearly helps, we explain the cost and the gain before anything is touched."
+    q: "Do I need to change my POS or software?",
+    a: "No. We start with what you already use and only suggest a change if it clearly helps you make more sales."
   },
   {
-    q: "How much time do owners need to give?",
-    a: "A short assessment session, then two lightweight check-ins. We build the system in a way that does not interrupt your daily service."
+    q: "How much of my time does this take?",
+    a: "We need one short call and a couple of quick check-ins — you keep running the shop while we build."
   },
   {
-    q: "Is this only about marketing?",
-    a: "No. The LBE focuses on repeat customers, online presence, resource planning and one clear daily view. Marketing is only one part of the system."
+    q: "Is this just marketing?",
+    a: "No. We help with repeat customers, reviews, stock and planning — marketing is just one piece."
   },
   {
-    q: "What if our data is messy?",
-    a: "That is normal. We start with cleanup and a simple structure so your dashboards and follow-ups are reliable."
+    q: "What if our customer list is a mess?",
+    a: "That’s normal. We clean up your list as part of the setup so everything starts from a fresh base."
   }
 ];
 
@@ -211,13 +211,12 @@ export default function App() {
 
         <div className="container hero-grid">
           <div>
-            <div className="hero-eyebrow">Revenue Booster System for Calgary</div>
+            <div className="hero-eyebrow">More sales from the customers you already have</div>
             <h1 className="hero-title">
-              More repeat customers. Clear daily control.
+              Turn first-time visitors into regulars.
             </h1>
             <p className="hero-sub">
-              The LBE builds a lightweight business system around your existing tools.
-              Owners feel the win fast, without learning another complicated platform.
+              We plug into the tools you already use and set up simple follow-ups that bring people back.
             </p>
 
             <div className="hero-cta">
@@ -226,19 +225,19 @@ export default function App() {
                 type="button"
                 onClick={() => scrollTo("contact")}
               >
-                Book Assessment
+                Book a quick call
               </button>
               <button
                 className="btn btn-ghost"
                 type="button"
                 onClick={() => scrollTo("wins")}
               >
-                See owner wins
+                See what you get
               </button>
             </div>
 
             <div className="hero-trust">
-              In-person or remote within Calgary. Built on what you already use.
+              We work in-person in Calgary, using the tools you already have.
             </div>
           </div>
 
@@ -256,7 +255,7 @@ export default function App() {
                 <div className="os-kpi">
                   <div className="os-kpi-label">today</div>
                   <div className="os-kpi-value">CA$ 4,260</div>
-                  <div className="os-kpi-sub">Healthy momentum</div>
+                  <div className="os-kpi-sub">Strong sales day</div>
                   <div className="os-progress">
                     <span className="os-progress-fill" />
                   </div>
@@ -264,7 +263,7 @@ export default function App() {
                 <div className="os-kpi">
                   <div className="os-kpi-label">returning</div>
                   <div className="os-kpi-value">43%</div>
-                  <div className="os-kpi-sub">Journeys activated</div>
+                  <div className="os-kpi-sub">Customers from follow-ups</div>
                   <div className="os-progress">
                     <span className="os-progress-fill" />
                   </div>
@@ -291,7 +290,7 @@ export default function App() {
               </div>
 
               <div className="hero-trust" style={{ marginTop: 14 }}>
-                Next action queued: review requests and win-back touchpoints.
+                Next up: send review invites and “we miss you” messages automatically.
               </div>
             </div>
           </div>
@@ -302,7 +301,7 @@ export default function App() {
       <div className="band">
         <div className="container" style={{ paddingTop: 18, paddingBottom: 18 }}>
           <div className="center">
-            <div className="eyebrow">Built for owner-operators</div>
+            <div className="eyebrow">Made for busy shop owners</div>
             <div className="section-sub" style={{ marginTop: 6 }}>
               Cafés, salons, clinics, retail and local services
             </div>
@@ -314,15 +313,17 @@ export default function App() {
       <section id="wins" className="section">
         <div className="container">
           <div className="center">
-            <div className="eyebrow">Immediate owner wins</div>
+            <div className="eyebrow">Quick owner wins</div>
             <h2 className="section-title">Three benefits you feel fast</h2>
-            <div className="section-sub">Minimal explanation. Visual proof. Owner-level clarity.</div>
+            <div className="section-sub">
+              No tech talk. Just simple, visible wins.
+            </div>
           </div>
 
           <div className="wins-rail" style={{ marginTop: 28 }}>
             <div className="win-block">
               <h3 className="win-title">More customers coming back</h3>
-              <p className="win-mini">Living customer list and automated follow-ups</p>
+              <p className="win-mini">We tidy your customer list and keep in touch for you.</p>
               <div className="micro-bars">
                 <span className="micro-bar" style={{ height: 32 }} />
                 <span className="micro-bar" style={{ height: 46 }} />
@@ -332,8 +333,8 @@ export default function App() {
             </div>
 
             <div className="win-block">
-              <h3 className="win-title">Stronger online presence</h3>
-              <p className="win-mini">Google profile, reviews, simple offer pages</p>
+              <h3 className="win-title">You look better online</h3>
+              <p className="win-mini">We help your Google listing and reviews look clean and clear.</p>
               <div className="orbit">
                 <span className="orbit-ring" />
                 <span className="orbit-ring r2" />
@@ -344,8 +345,8 @@ export default function App() {
             </div>
 
             <div className="win-block">
-              <h3 className="win-title">Smarter planning</h3>
-              <p className="win-mini">Inventory, reservations and resource rhythm</p>
+              <h3 className="win-title">Easier planning for staff and stock</h3>
+              <p className="win-mini">Quick snapshots of stock, bookings and team load in one place.</p>
               <div className="plan-grid">
                 <div className="plan-cell">
                   <span className="plan-chip">Stock health</span>
@@ -373,18 +374,18 @@ export default function App() {
       <section id="system" className="section">
         <div className="container system-map">
           <div>
-            <div className="eyebrow">What we build</div>
-            <h2 className="section-title">A revenue system, not more software</h2>
+            <div className="eyebrow">What we set up for you</div>
+            <h2 className="section-title">A simple sales machine, not another app</h2>
             <div className="section-sub">
-              Five outcomes, one connected setup. Designed to be calm, measurable and easy to run.
+              We connect a few simple pieces so your business runs smoother and sells more.
             </div>
 
             <div style={{ marginTop: 18, display: "flex", flexWrap: "wrap", gap: 10 }}>
-              <span className="core-pill">Repeat customer engine</span>
-              <span className="core-pill">Online trust and review flow</span>
-              <span className="core-pill">Inventory and schedule clarity</span>
-              <span className="core-pill">One daily control view</span>
-              <span className="core-pill">Team routines that stick</span>
+              <span className="core-pill">More regular customers</span>
+              <span className="core-pill">More good Google reviews</span>
+              <span className="core-pill">Know your bookings and stock</span>
+              <span className="core-pill">One simple daily screen</span>
+              <span className="core-pill">Clear tasks for your team</span>
             </div>
 
             <div className="hero-cta">
@@ -393,14 +394,14 @@ export default function App() {
                 type="button"
                 onClick={() => scrollTo("results")}
               >
-                See patterns
+                See how it works
               </button>
               <button
                 className="btn btn-primary"
                 type="button"
                 onClick={() => scrollTo("contact")}
               >
-                Map my system
+                Book my free checkup
               </button>
             </div>
           </div>
@@ -409,30 +410,30 @@ export default function App() {
             <div className="map-nodes">
               <div className="map-node">
                 <strong>POS</strong><br />
-                <span>Sales, visits, items</span>
+                <span>Sales and visits</span>
               </div>
               <div className="map-node">
                 <strong>Bookings</strong><br />
-                <span>Time, capacity, demand</span>
+                <span>Bookings and free slots</span>
               </div>
               <div className="map-node">
                 <strong>Sheets</strong><br />
-                <span>Inventory, suppliers</span>
+                <span>Stock and suppliers</span>
               </div>
               <div className="map-node">
                 <strong>Email and Reviews</strong><br />
-                <span>Trust and retention</span>
+                <span>Reviews and offers</span>
               </div>
             </div>
 
             <div className="map-core">
-              <div className="map-core-title">LBE Revenue Control Layer</div>
+              <div className="map-core-title">LBE Sales Booster</div>
               <div className="map-core-bars">
-                <span className="core-pill">Daily dashboard</span>
-                <span className="core-pill">Review journey</span>
-                <span className="core-pill">Win-back flow</span>
-                <span className="core-pill">Stock alerts</span>
-                <span className="core-pill">Weekly owner rhythm</span>
+                <span className="core-pill">Daily snapshot</span>
+                <span className="core-pill">Review requests</span>
+                <span className="core-pill">Come-back campaigns</span>
+                <span className="core-pill">Stock reminders</span>
+                <span className="core-pill">Weekly owner check-in</span>
               </div>
             </div>
           </div>
@@ -443,38 +444,38 @@ export default function App() {
       <section id="results" className="section">
         <div className="container results-row">
           <div>
-            <div className="eyebrow">Owner confidence</div>
-            <h2 className="section-title">A calmer business runs better</h2>
+            <div className="eyebrow">How your days feel</div>
+            <h2 className="section-title">Less stress, more steady sales</h2>
             <div className="section-sub">
-              The real win is not only growth. It is control. Owners stop guessing and start steering.
+              It&apos;s not just about more sales — it&apos;s about feeling in control each week.
             </div>
 
             <div style={{ marginTop: 18, display: "grid", gap: 10, maxWidth: 420 }}>
               <div className="win-block" style={{ padding: 16 }}>
-                <div className="win-mini" style={{ marginBottom: 8 }}>Daily view</div>
+                <div className="win-mini" style={{ marginBottom: 8 }}>Today at a glance</div>
                 <strong style={{ fontSize: 20, fontFamily: "var(--font-heading)" }}>
-                  One screen, one story
+                  Everything important on one screen
                 </strong>
               </div>
               <div className="win-block" style={{ padding: 16 }}>
-                <div className="win-mini" style={{ marginBottom: 8 }}>Retention pattern</div>
+                <div className="win-mini" style={{ marginBottom: 8 }}>Who comes back</div>
                 <strong style={{ fontSize: 20, fontFamily: "var(--font-heading)" }}>
-                  Repeat visits stop being random
+                  You can see which customers are returning
                 </strong>
               </div>
               <div className="win-block" style={{ padding: 16 }}>
-                <div className="win-mini" style={{ marginBottom: 8 }}>Team rhythm</div>
+                <div className="win-mini" style={{ marginBottom: 8 }}>Team routines</div>
                 <strong style={{ fontSize: 20, fontFamily: "var(--font-heading)" }}>
-                  Clear routines reduce owner load
+                  Staff know the plan, so you don&apos;t carry it all
                 </strong>
               </div>
             </div>
           </div>
 
           <div className="result-visual">
-            <div className="eyebrow">Visual pattern</div>
+            <div className="eyebrow">Before vs after</div>
             <h3 style={{ marginTop: 8, marginBottom: 10 }}>
-              Revenue stability curve
+              Sales getting more steady
             </h3>
 
             <div
@@ -496,14 +497,14 @@ export default function App() {
                 <span className="os-bar" style={{ height: 82, width: 12 }} />
               </div>
               <div className="section-sub" style={{ marginTop: 10 }}>
-                Visual only. Patterns vary by business. We track improvements with you.
+                Example only — every business is different. We track your numbers with you.
               </div>
             </div>
 
             <div style={{ marginTop: 16, display: "flex", flexWrap: "wrap", gap: 10 }}>
-              <span className="core-pill">Repeat customer lift</span>
-              <span className="core-pill">Review volume growth</span>
-              <span className="core-pill">Fewer stock surprises</span>
+              <span className="core-pill">More customers coming back</span>
+              <span className="core-pill">More 5-star reviews</span>
+              <span className="core-pill">Stock under better control</span>
             </div>
           </div>
         </div>
@@ -513,10 +514,10 @@ export default function App() {
       <section id="faq" className="section">
         <div className="container" style={{ maxWidth: 900 }}>
           <div className="center">
-            <div className="eyebrow">Questions</div>
-            <h2 className="section-title">Short answers, no noise</h2>
+            <div className="eyebrow">Quick answers</div>
+            <h2 className="section-title">Straight answers, no jargon</h2>
             <div className="section-sub">
-              Designed for busy owners who want clarity fast.
+              Made for busy owners who don&apos;t have time for tech talk.
             </div>
           </div>
 
@@ -584,21 +585,20 @@ export default function App() {
           <div className="contact-shell">
             <div className="contact-grid">
               <div>
-                <div className="eyebrow">System assessment</div>
-                <h2 className="section-title">We map your revenue system</h2>
+                <div className="eyebrow">Free sales checkup</div>
+                <h2 className="section-title">Let&apos;s see what we can fix in 2 weeks</h2>
                 <div className="section-sub">
-                  Short assessment. Clear scope. A simple plan focused on repeat customers,
-                  online trust, planning clarity and one daily control view.
+                  One short form and a quick chat. You get a clear plan to bring customers back more often and lift sales.
                 </div>
 
                 <div style={{ marginTop: 18, display: "grid", gap: 10 }}>
                   <div className="win-block" style={{ padding: 16 }}>
-                    <strong>Owner-first outcome mapping</strong>
-                    <div className="win-mini">We start from your weekly pain, not software features.</div>
+                    <strong>Start with your biggest headache</strong>
+                    <div className="win-mini">You tell us what hurts each week — we design around that.</div>
                   </div>
                   <div className="win-block" style={{ padding: 16 }}>
-                    <strong>Built around your tools</strong>
-                    <div className="win-mini">POS, bookings, sheets, email, reviews.</div>
+                    <strong>Use what you already have</strong>
+                    <div className="win-mini">We plug into your POS, bookings, spreadsheets, email and Google reviews.</div>
                   </div>
                 </div>
               </div>
@@ -631,7 +631,7 @@ export default function App() {
                   </div>
 
                   <button className="btn btn-primary" type="submit" style={{ width: "100%", marginTop: 6 }}>
-                    Book my assessment
+                    Book my free checkup
                   </button>
 
                   <div style={{ display: "flex", justifyContent: "space-between", gap: 10, marginTop: 8, flexWrap: "wrap" }}>
@@ -639,7 +639,7 @@ export default function App() {
                       Prefer to call? +1 (587) 718-5627
                     </span>
                     <span className="section-sub" style={{ fontSize: 12.5, marginTop: 0 }}>
-                      Typical response within 1 business day
+                      We usually reply within one business day
                     </span>
                   </div>
                 </form>

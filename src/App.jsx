@@ -19,7 +19,7 @@ const FAQ_ITEMS = [
   },
   {
     q: "Is this just marketing?",
-    a: "No. We help with repeat customers, reviews, stock and planning — marketing is just one piece."
+    a: "No. We mainly help with repeat customers and reviews — marketing is just one piece."
   },
   {
     q: "What if our customer list is a mess?",
@@ -345,23 +345,23 @@ export default function App() {
             </div>
 
             <div className="win-block">
-              <h3 className="win-title">Easier planning for staff and stock</h3>
-              <p className="win-mini">Quick snapshots of stock, bookings and team load in one place.</p>
+              <h3 className="win-title">Simple daily numbers</h3>
+              <p className="win-mini">Quick view of sales and follow-ups in one place.</p>
               <div className="plan-grid">
                 <div className="plan-cell">
-                  <span className="plan-chip">Stock health</span>
+                  <span className="plan-chip">New customers</span>
                   <span className="plan-line"><span className="plan-line-fill" /></span>
                 </div>
                 <div className="plan-cell">
-                  <span className="plan-chip">Bookings flow</span>
+                  <span className="plan-chip">Came back again</span>
                   <span className="plan-line"><span className="plan-line-fill" /></span>
                 </div>
                 <div className="plan-cell">
-                  <span className="plan-chip">Staff load</span>
+                  <span className="plan-chip">Review invites sent</span>
                   <span className="plan-line"><span className="plan-line-fill" /></span>
                 </div>
                 <div className="plan-cell">
-                  <span className="plan-chip">Supplier timing</span>
+                  <span className="plan-chip">Offers sent</span>
                   <span className="plan-line"><span className="plan-line-fill" /></span>
                 </div>
               </div>
@@ -383,7 +383,7 @@ export default function App() {
             <div style={{ marginTop: 18, display: "flex", flexWrap: "wrap", gap: 10 }}>
               <span className="core-pill">More regular customers</span>
               <span className="core-pill">More good Google reviews</span>
-              <span className="core-pill">Know your bookings and stock</span>
+              <span className="core-pill">Know who to follow up with</span>
               <span className="core-pill">One simple daily screen</span>
               <span className="core-pill">Clear tasks for your team</span>
             </div>
@@ -413,12 +413,12 @@ export default function App() {
                 <span>Sales and visits</span>
               </div>
               <div className="map-node">
-                <strong>Bookings</strong><br />
-                <span>Bookings and free slots</span>
+                <strong>Customer list</strong><br />
+                <span>Names and phone numbers</span>
               </div>
               <div className="map-node">
-                <strong>Sheets</strong><br />
-                <span>Stock and suppliers</span>
+                <strong>Spreadsheets</strong><br />
+                <span>Simple customer lists</span>
               </div>
               <div className="map-node">
                 <strong>Email and Reviews</strong><br />
@@ -432,7 +432,7 @@ export default function App() {
                 <span className="core-pill">Daily snapshot</span>
                 <span className="core-pill">Review requests</span>
                 <span className="core-pill">Come-back campaigns</span>
-                <span className="core-pill">Stock reminders</span>
+                <span className="core-pill">Simple follow-up list</span>
                 <span className="core-pill">Weekly owner check-in</span>
               </div>
             </div>
@@ -504,7 +504,7 @@ export default function App() {
             <div style={{ marginTop: 16, display: "flex", flexWrap: "wrap", gap: 10 }}>
               <span className="core-pill">More customers coming back</span>
               <span className="core-pill">More 5-star reviews</span>
-              <span className="core-pill">Stock under better control</span>
+              <span className="core-pill">Follow-ups you don&apos;t have to remember</span>
             </div>
           </div>
         </div>
@@ -598,7 +598,7 @@ export default function App() {
                   </div>
                   <div className="win-block" style={{ padding: 16 }}>
                     <strong>Use what you already have</strong>
-                    <div className="win-mini">We plug into your POS, bookings, spreadsheets, email and Google reviews.</div>
+                    <div className="win-mini">We plug into your POS, simple lists, email and Google reviews.</div>
                   </div>
                 </div>
               </div>
@@ -627,7 +627,7 @@ export default function App() {
                   </div>
                   <div>
                     <label>Biggest headache</label>
-                    <textarea placeholder="Repeat customers, reviews, inventory, daily control..." />
+                    <textarea placeholder="Repeat customers, reviews, daily control..." />
                   </div>
 
                   <button className="btn btn-primary" type="submit" style={{ width: "100%", marginTop: 6 }}>

@@ -992,3 +992,64 @@ textarea:focus-visible {
 @media (min-width: 768px) {
   .hide-mobile { display: block; }
 }
+
+.contact-methods {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: 1fr; /* always one column, phone on top, email below */
+}
+
+
+.contact-method {
+  padding: 18px 18px 16px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-method-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.contact-method-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 9999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--brand-soft);
+  font-size: 16px;
+}
+
+.contact-method-label {
+  font-size: 11px;
+  font-weight: 650;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.contact-method-value {
+  font-family: var(--font-heading);
+  font-size: 19px;
+  font-weight: 650;
+  text-decoration: none;
+  color: var(--ink);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-method-value:hover {
+  color: var(--brand);
+}
+
+.contact-method-meta {
+  font-size: 12.5px;
+  color: var(--muted);
+  line-height: 1.5;
+}
+

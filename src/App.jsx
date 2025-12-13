@@ -648,7 +648,7 @@ export default function App() {
                 <div className="eyebrow">Free sales checkup</div>
                 <h2 className="section-title">Let&apos;s see what we can fix in 2 weeks</h2>
                 <div className="section-sub">
-                  One short form and a quick chat. You get a clear plan to bring customers back
+                  One short call or a quick email. You get a clear plan to bring customers back
                   more often, grow reviews and lift sales.
                 </div>
 
@@ -670,62 +670,55 @@ export default function App() {
               </div>
 
               <div>
-                <form className="form" onSubmit={onSubmit}>
-                  <div>
-                    <label>Your name</label>
-                    <input type="text" placeholder="Your full name" />
-                  </div>
-                  <div>
-                    <label>Business name</label>
-                    <input type="text" placeholder="Business name" />
-                  </div>
-                  <div>
-                    <label>Email</label>
-                    <input type="email" placeholder="you@example.com" />
-                  </div>
-                  <div>
-                    <label>Phone number</label>
-                    <input type="text" placeholder="(403) 000 0000" />
-                  </div>
-                  <div>
-                    <label>Business type</label>
-                    <input type="text" placeholder="Café, salon, clinic, shop" />
-                  </div>
-                  <div>
-                    <label>Biggest headache</label>
-                    <textarea placeholder="Repeat customers, reviews, follow-ups, staying in touch..." />
+                <div className="contact-methods">
+                  <div className="win-block contact-method">
+                    <div className="contact-method-header">
+                      <span className="contact-method-icon">📞</span>
+                      <div>
+                        <div className="contact-method-label">Call or text</div>
+                        <div className="contact-method-meta">
+                          Best for quick questions and next steps
+                        </div>
+                      </div>
+                    </div>
+
+                    <a href="tel:+15877185627" className="contact-method-value">
+                      +1 (587) 718-5627
+                    </a>
+
+                    <div className="contact-method-meta">
+                      If we don&apos;t pick up, leave a short message and we&apos;ll call you back.
+                    </div>
                   </div>
 
-                  <button
-                    className="btn btn-primary"
-                    type="submit"
-                    style={{ width: "100%", marginTop: 6 }}
-                  >
-                    Book my free checkup
-                  </button>
+                  <div className="win-block contact-method">
+                    <div className="contact-method-header">
+                      <span className="contact-method-icon">✉️</span>
+                      <div>
+                        <div className="contact-method-label">Email us</div>
+                        <div className="contact-method-meta">
+                          Best for sharing a bit more context
+                        </div>
+                      </div>
+                    </div>
 
-                  <div
-                    style={{
-                      display: "flex",
-                      justifyContent: "space-between",
-                      gap: 10,
-                      marginTop: 8,
-                      flexWrap: "wrap"
-                    }}
-                  >
-                    <span className="section-sub" style={{ fontSize: 12.5, marginTop: 0 }}>
-                      Prefer to call? +1 (587) 718-5627
-                    </span>
-                    <span className="section-sub" style={{ fontSize: 12.5, marginTop: 0 }}>
-                      We usually reply within one business day
-                    </span>
+                    <a href="mailto:me@elnarm.ca" className="contact-method-value">
+                      me@elnarm.ca
+                    </a>
+
+                    <div className="contact-method-meta">
+                      Tell us your business type and your main headache. We usually reply within
+                      one business day.
+                    </div>
                   </div>
-                </form>
+                </div>
               </div>
+
             </div>
           </div>
         </div>
       </section>
+
 
       {/* FOOTER */}
       <footer className="footer">
@@ -753,7 +746,7 @@ export default function App() {
             >
               Terms
             </a>
-            <a href="mailto:info@elnarm.ca">info@elnarm.ca</a>
+            <a href="mailto:me@elnarm.ca">me@elnarm.ca</a>
           </div>
         </div>
         <div className="container" style={{ paddingBottom: 26 }}>

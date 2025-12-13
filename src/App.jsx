@@ -19,7 +19,7 @@ const FAQ_ITEMS = [
   },
   {
     q: "Is this just marketing?",
-    a: "No. We mainly help with repeat customers and reviews — marketing is just one piece."
+    a: "No. We focus on bringing customers back, growing your reviews and making your days feel calmer — marketing is just one piece."
   },
   {
     q: "What if our customer list is a mess?",
@@ -30,7 +30,8 @@ const FAQ_ITEMS = [
 function getInitialTheme() {
   const stored = localStorage.getItem("lbe_theme");
   if (stored === "light" || stored === "dark") return stored;
-  const prefersDark = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
+  const prefersDark =
+    window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches;
   return prefersDark ? "dark" : "light";
 }
 
@@ -96,7 +97,13 @@ export default function App() {
       {/* NAV */}
       <div className="nav">
         <div className="container nav-inner">
-          <a href="#hero" onClick={(e) => { e.preventDefault(); scrollTo("hero"); }}>
+          <a
+            href="#hero"
+            onClick={e => {
+              e.preventDefault();
+              scrollTo("hero");
+            }}
+          >
             <img className="logo-long" src={activeLogo.long} alt="The LBE logo" />
             <img className="logo-short" src={activeLogo.short} alt="The LBE logo" />
           </a>
@@ -106,7 +113,10 @@ export default function App() {
               <a
                 key={item.id}
                 href={`#${item.id}`}
-                onClick={(e) => { e.preventDefault(); scrollTo(item.id); }}
+                onClick={e => {
+                  e.preventDefault();
+                  scrollTo(item.id);
+                }}
               >
                 {item.label}
               </a>
@@ -168,8 +178,18 @@ export default function App() {
             aria-label="Close menu"
           >
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-              <path d="M6 6L18 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-              <path d="M18 6L6 18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
+              <path
+                d="M6 6L18 18"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
+              <path
+                d="M18 6L6 18"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+              />
             </svg>
           </button>
         </div>
@@ -179,14 +199,20 @@ export default function App() {
             <a
               key={item.id}
               href={`#${item.id}`}
-              onClick={(e) => { e.preventDefault(); scrollTo(item.id); }}
+              onClick={e => {
+                e.preventDefault();
+                scrollTo(item.id);
+              }}
             >
               {item.label}
             </a>
           ))}
           <a
             href="#contact"
-            onClick={(e) => { e.preventDefault(); scrollTo("contact"); }}
+            onClick={e => {
+              e.preventDefault();
+              scrollTo("contact");
+            }}
           >
             Call: +1 (587) 718-5627
           </a>
@@ -212,11 +238,10 @@ export default function App() {
         <div className="container hero-grid">
           <div>
             <div className="hero-eyebrow">More sales from the customers you already have</div>
-            <h1 className="hero-title">
-              Turn first-time visitors into regulars.
-            </h1>
+            <h1 className="hero-title">Turn first-time visitors into regulars.</h1>
             <p className="hero-sub">
-              We plug into the tools you already use and set up simple follow-ups that bring people back.
+              We plug into the tools you already use and set up simple follow-ups that bring
+              people back — usually in about 2 weeks.
             </p>
 
             <div className="hero-cta">
@@ -237,17 +262,18 @@ export default function App() {
             </div>
 
             <div className="hero-trust">
-              We work in-person in Calgary, using the tools you already have.
+              We work in-person in Calgary, using the tools you already have. You don&apos;t need
+              to learn new software.
             </div>
           </div>
 
           <div>
             <div className="os-panel">
               <div className="os-header">
-                <div className="os-title">Today&apos;s control room</div>
+                <div className="os-title">Today&apos;s sales screen</div>
                 <span className="os-pill">
                   <span className="os-dot" />
-                  Stable system
+                  Follow-ups running
                 </span>
               </div>
 
@@ -263,7 +289,7 @@ export default function App() {
                 <div className="os-kpi">
                   <div className="os-kpi-label">returning</div>
                   <div className="os-kpi-value">43%</div>
-                  <div className="os-kpi-sub">Customers from follow-ups</div>
+                  <div className="os-kpi-sub">Customers back from messages</div>
                   <div className="os-progress">
                     <span className="os-progress-fill" />
                   </div>
@@ -273,7 +299,7 @@ export default function App() {
               <div className="os-bars">
                 <div className="os-bars-head">
                   <span>Last 7 days</span>
-                  <span>Sales focus</span>
+                  <span>Sales from regulars</span>
                 </div>
                 <div className="os-bars-track">
                   <span className="os-bar" style={{ height: 42 }} />
@@ -285,7 +311,13 @@ export default function App() {
                   <span className="os-bar" style={{ height: 78 }} />
                 </div>
                 <div className="os-bars-labels">
-                  <span>M</span><span>T</span><span>W</span><span>T</span><span>F</span><span>S</span><span>S</span>
+                  <span>M</span>
+                  <span>T</span>
+                  <span>W</span>
+                  <span>T</span>
+                  <span>F</span>
+                  <span>S</span>
+                  <span>S</span>
                 </div>
               </div>
 
@@ -303,7 +335,7 @@ export default function App() {
           <div className="center">
             <div className="eyebrow">Made for busy shop owners</div>
             <div className="section-sub" style={{ marginTop: 6 }}>
-              Cafés, salons, clinics, retail and local services
+              Cafés, salons, clinics, retail and local services in Calgary
             </div>
           </div>
         </div>
@@ -315,15 +347,16 @@ export default function App() {
           <div className="center">
             <div className="eyebrow">Quick owner wins</div>
             <h2 className="section-title">Three benefits you feel fast</h2>
-            <div className="section-sub">
-              No tech talk. Just simple, visible wins.
-            </div>
+            <div className="section-sub">No tech talk. Just simple, visible wins.</div>
           </div>
 
           <div className="wins-rail" style={{ marginTop: 28 }}>
             <div className="win-block">
               <h3 className="win-title">More customers coming back</h3>
-              <p className="win-mini">We tidy your customer list and keep in touch for you.</p>
+              <p className="win-mini">
+                We clean up your customer list and send thank-you and “we miss you” messages for
+                you.
+              </p>
               <div className="micro-bars">
                 <span className="micro-bar" style={{ height: 32 }} />
                 <span className="micro-bar" style={{ height: 46 }} />
@@ -333,8 +366,10 @@ export default function App() {
             </div>
 
             <div className="win-block">
-              <h3 className="win-title">You look better online</h3>
-              <p className="win-mini">We help your Google listing and reviews look clean and clear.</p>
+              <h3 className="win-title">You look better on Google</h3>
+              <p className="win-mini">
+                We set up simple review and referral messages so happy customers bring more people.
+              </p>
               <div className="orbit">
                 <span className="orbit-ring" />
                 <span className="orbit-ring r2" />
@@ -345,24 +380,34 @@ export default function App() {
             </div>
 
             <div className="win-block">
-              <h3 className="win-title">Simple daily numbers</h3>
-              <p className="win-mini">Quick view of sales and follow-ups in one place.</p>
+              <h3 className="win-title">You know what&apos;s working</h3>
+              <p className="win-mini">
+                Simple numbers show who came back, new reviews, and which offers got a response.
+              </p>
               <div className="plan-grid">
                 <div className="plan-cell">
-                  <span className="plan-chip">New customers</span>
-                  <span className="plan-line"><span className="plan-line-fill" /></span>
+                  <span className="plan-chip">Came back</span>
+                  <span className="plan-line">
+                    <span className="plan-line-fill" />
+                  </span>
                 </div>
                 <div className="plan-cell">
-                  <span className="plan-chip">Came back again</span>
-                  <span className="plan-line"><span className="plan-line-fill" /></span>
-                </div>
-                <div className="plan-cell">
-                  <span className="plan-chip">Review invites sent</span>
-                  <span className="plan-line"><span className="plan-line-fill" /></span>
+                  <span className="plan-chip">New reviews</span>
+                  <span className="plan-line">
+                    <span className="plan-line-fill" />
+                  </span>
                 </div>
                 <div className="plan-cell">
                   <span className="plan-chip">Offers sent</span>
-                  <span className="plan-line"><span className="plan-line-fill" /></span>
+                  <span className="plan-line">
+                    <span className="plan-line-fill" />
+                  </span>
+                </div>
+                <div className="plan-cell">
+                  <span className="plan-chip">People to reach</span>
+                  <span className="plan-line">
+                    <span className="plan-line-fill" />
+                  </span>
                 </div>
               </div>
             </div>
@@ -370,22 +415,22 @@ export default function App() {
         </div>
       </section>
 
-      {/* SYSTEM */}
+      {/* SYSTEM / HOW IT WORKS */}
       <section id="system" className="section">
         <div className="container system-map">
           <div>
             <div className="eyebrow">What we set up for you</div>
             <h2 className="section-title">A simple sales machine, not another app</h2>
             <div className="section-sub">
-              We connect a few simple pieces so your business runs smoother and sells more.
+              In about 2 weeks, we set up three simple pieces that work together in the background.
             </div>
 
             <div style={{ marginTop: 18, display: "flex", flexWrap: "wrap", gap: 10 }}>
-              <span className="core-pill">More regular customers</span>
-              <span className="core-pill">More good Google reviews</span>
-              <span className="core-pill">Know who to follow up with</span>
-              <span className="core-pill">One simple daily screen</span>
-              <span className="core-pill">Clear tasks for your team</span>
+              <span className="core-pill">Clean customer list in one place</span>
+              <span className="core-pill">Automatic thank-you and “we miss you” messages</span>
+              <span className="core-pill">Review and referral requests</span>
+              <span className="core-pill">Simple daily sales snapshot</span>
+              <span className="core-pill">Optional monthly insights and support</span>
             </div>
 
             <div className="hero-cta">
@@ -394,7 +439,7 @@ export default function App() {
                 type="button"
                 onClick={() => scrollTo("results")}
               >
-                See how it works
+                See how it feels after
               </button>
               <button
                 className="btn btn-primary"
@@ -409,20 +454,24 @@ export default function App() {
           <div className="map-visual">
             <div className="map-nodes">
               <div className="map-node">
-                <strong>POS</strong><br />
+                <strong>POS</strong>
+                <br />
                 <span>Sales and visits</span>
               </div>
               <div className="map-node">
-                <strong>Customer list</strong><br />
-                <span>Names and phone numbers</span>
+                <strong>Customer list</strong>
+                <br />
+                <span>Names, phone, email</span>
               </div>
               <div className="map-node">
-                <strong>Spreadsheets</strong><br />
-                <span>Simple customer lists</span>
+                <strong>Email / SMS</strong>
+                <br />
+                <span>Thank-you and offers</span>
               </div>
               <div className="map-node">
-                <strong>Email and Reviews</strong><br />
-                <span>Reviews and offers</span>
+                <strong>Google Business</strong>
+                <br />
+                <span>Reviews and search</span>
               </div>
             </div>
 
@@ -432,8 +481,8 @@ export default function App() {
                 <span className="core-pill">Daily snapshot</span>
                 <span className="core-pill">Review requests</span>
                 <span className="core-pill">Come-back campaigns</span>
-                <span className="core-pill">Simple follow-up list</span>
-                <span className="core-pill">Weekly owner check-in</span>
+                <span className="core-pill">Referral nudges</span>
+                <span className="core-pill">Short weekly owner check-in</span>
               </div>
             </div>
           </div>
@@ -452,19 +501,25 @@ export default function App() {
 
             <div style={{ marginTop: 18, display: "grid", gap: 10, maxWidth: 420 }}>
               <div className="win-block" style={{ padding: 16 }}>
-                <div className="win-mini" style={{ marginBottom: 8 }}>Today at a glance</div>
+                <div className="win-mini" style={{ marginBottom: 8 }}>
+                  Today at a glance
+                </div>
                 <strong style={{ fontSize: 20, fontFamily: "var(--font-heading)" }}>
-                  Everything important on one screen
+                  Everything important on one simple screen
                 </strong>
               </div>
               <div className="win-block" style={{ padding: 16 }}>
-                <div className="win-mini" style={{ marginBottom: 8 }}>Who comes back</div>
+                <div className="win-mini" style={{ marginBottom: 8 }}>
+                  Who comes back
+                </div>
                 <strong style={{ fontSize: 20, fontFamily: "var(--font-heading)" }}>
                   You can see which customers are returning
                 </strong>
               </div>
               <div className="win-block" style={{ padding: 16 }}>
-                <div className="win-mini" style={{ marginBottom: 8 }}>Team routines</div>
+                <div className="win-mini" style={{ marginBottom: 8 }}>
+                  Team routines
+                </div>
                 <strong style={{ fontSize: 20, fontFamily: "var(--font-heading)" }}>
                   Staff know the plan, so you don&apos;t carry it all
                 </strong>
@@ -474,9 +529,7 @@ export default function App() {
 
           <div className="result-visual">
             <div className="eyebrow">Before vs after</div>
-            <h3 style={{ marginTop: 8, marginBottom: 10 }}>
-              Sales getting more steady
-            </h3>
+            <h3 style={{ marginTop: 8, marginBottom: 10 }}>Sales getting more steady</h3>
 
             <div
               style={{
@@ -504,7 +557,7 @@ export default function App() {
             <div style={{ marginTop: 16, display: "flex", flexWrap: "wrap", gap: 10 }}>
               <span className="core-pill">More customers coming back</span>
               <span className="core-pill">More 5-star reviews</span>
-              <span className="core-pill">Follow-ups you don&apos;t have to remember</span>
+              <span className="core-pill">Follow-ups running in the background</span>
             </div>
           </div>
         </div>
@@ -568,7 +621,14 @@ export default function App() {
                     </svg>
                   </button>
                   {isOpen && (
-                    <div style={{ padding: "0 6px 16px 6px", color: "var(--muted)", fontSize: 14.5, lineHeight: 1.6 }}>
+                    <div
+                      style={{
+                        padding: "0 6px 16px 6px",
+                        color: "var(--muted)",
+                        fontSize: 14.5,
+                        lineHeight: 1.6
+                      }}
+                    >
                       {item.a}
                     </div>
                   )}
@@ -588,17 +648,23 @@ export default function App() {
                 <div className="eyebrow">Free sales checkup</div>
                 <h2 className="section-title">Let&apos;s see what we can fix in 2 weeks</h2>
                 <div className="section-sub">
-                  One short form and a quick chat. You get a clear plan to bring customers back more often and lift sales.
+                  One short form and a quick chat. You get a clear plan to bring customers back
+                  more often, grow reviews and lift sales.
                 </div>
 
                 <div style={{ marginTop: 18, display: "grid", gap: 10 }}>
                   <div className="win-block" style={{ padding: 16 }}>
                     <strong>Start with your biggest headache</strong>
-                    <div className="win-mini">You tell us what hurts each week — we design around that.</div>
+                    <div className="win-mini">
+                      You tell us what hurts each week — we design around that.
+                    </div>
                   </div>
                   <div className="win-block" style={{ padding: 16 }}>
                     <strong>Use what you already have</strong>
-                    <div className="win-mini">We plug into your POS, simple lists, email and Google reviews.</div>
+                    <div className="win-mini">
+                      We plug into your POS, customer lists, email tools and Google Business
+                      profile.
+                    </div>
                   </div>
                 </div>
               </div>
@@ -627,14 +693,26 @@ export default function App() {
                   </div>
                   <div>
                     <label>Biggest headache</label>
-                    <textarea placeholder="Repeat customers, reviews, daily control..." />
+                    <textarea placeholder="Repeat customers, reviews, follow-ups, staying in touch..." />
                   </div>
 
-                  <button className="btn btn-primary" type="submit" style={{ width: "100%", marginTop: 6 }}>
+                  <button
+                    className="btn btn-primary"
+                    type="submit"
+                    style={{ width: "100%", marginTop: 6 }}
+                  >
                     Book my free checkup
                   </button>
 
-                  <div style={{ display: "flex", justifyContent: "space-between", gap: 10, marginTop: 8, flexWrap: "wrap" }}>
+                  <div
+                    style={{
+                      display: "flex",
+                      justifyContent: "space-between",
+                      gap: 10,
+                      marginTop: 8,
+                      flexWrap: "wrap"
+                    }}
+                  >
                     <span className="section-sub" style={{ fontSize: 12.5, marginTop: 0 }}>
                       Prefer to call? +1 (587) 718-5627
                     </span>
@@ -659,8 +737,22 @@ export default function App() {
             <span> · Local Business Enablement · Calgary, Alberta</span>
           </div>
           <div className="footer-links">
-            <a href="#" onClick={(e) => e.preventDefault()}>Privacy Policy</a>
-            <a href="#" onClick={(e) => e.preventDefault()}>Terms</a>
+            <a
+              href="#"
+              onClick={e => {
+                e.preventDefault();
+              }}
+            >
+              Privacy Policy
+            </a>
+            <a
+              href="#"
+              onClick={e => {
+                e.preventDefault();
+              }}
+            >
+              Terms
+            </a>
             <a href="mailto:info@elnarm.ca">info@elnarm.ca</a>
           </div>
         </div>
